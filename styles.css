@@ -1,0 +1,92 @@
+/* Customizable colors: change these variables */
+:root {
+  --primary-color: #3498db;
+  --accent-color: #e74c3c;
+  --bg-color: #f4f4f4;
+  --card-back: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: var(--bg-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header {
+  background: var(--primary-color);
+  color: #fff;
+  width: 100%;
+  padding: 1rem;
+  text-align: center;
+}
+
+#howToBtn {
+  background: var(--accent-color);
+  border: none;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 0.5rem;
+}
+
+.game-grid {
+  display: grid;
+  gap: 10px;
+  padding: 1rem;
+  width: 100%;
+  max-width: 400px;
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+}
+
+.card {
+  background: var(--card-back);
+  border-radius: 8px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  cursor: pointer;
+  position: relative;
+}
+
+.card.flipped {
+  background: var(--primary-color);
+  color: #fff;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+  background: #fff;
+  margin: 10% auto;
+  padding: 1rem;
+  width: 80%;
+  max-width: 300px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.close {
+  float: right;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
