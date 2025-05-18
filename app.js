@@ -85,3 +85,7 @@ window.onclick = (e) => {
 }
 
 document.addEventListener('DOMContentLoaded', initGame);
+document.getElementById('newGameBtn').addEventListener('click', () => {
+  initGame();
+});
+
